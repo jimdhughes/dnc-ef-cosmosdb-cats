@@ -3,7 +3,7 @@
 ## Setup
 
 1. Add your cosmosdb connection information in `Api/appsettings.json`
-2. Run with `dotnet run`
+2. Run with `dotnet run --project ./Api/Api.csproj`
 3. Go to the swagger instance and play with the API: `https://localhost:5001/swagger` by default
 
 ## Organization
