@@ -14,7 +14,7 @@ namespace CatsApi.Data
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       // Cats Setup
-      modelBuilder.Entity<Cat>().ToContainer("Cats").HasNoDiscriminator().HasQueryFilter(x => !x.IsDeleted);
+      modelBuilder.Entity<Cat>().ToContainer("Cats").HasNoDiscriminator().HasQueryFilter(x => !x.IsDeleted).OwnsMany(x => x.Vaccinations, y => y.ToJsonProperty("Vaccinations"));
 
       base.OnModelCreating(modelBuilder);
     }

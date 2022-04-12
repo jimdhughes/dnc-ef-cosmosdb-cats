@@ -1,7 +1,5 @@
-using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace CatsApi.Domain.Entities
 {
   public class Cat : BaseEntity
@@ -16,5 +14,7 @@ namespace CatsApi.Domain.Entities
     public string Color { get; set; }
 
     public string ImageURL { get; set; }
+
+    public IList<Vaccination> Vaccinations { get; set; }
   }
 }
